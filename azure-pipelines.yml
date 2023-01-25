@@ -26,3 +26,8 @@ steps:
   displayName: 'Publish Artifact: drop'
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
+    steps:
+- task: VSBuild@1
+  displayName: 'Build solution $(System.DefaultWorkingDirectory)/_Pooja-iris.IRISCALCN'
+  inputs:
+    solution: '$(System.DefaultWorkingDirectory)/_Pooja-iris.IRISCALCN'
